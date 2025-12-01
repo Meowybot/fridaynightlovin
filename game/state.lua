@@ -1,6 +1,9 @@
-state = {}
-fstate = {}
-astate = {}
+local state = {}
+local fstate = {}
+local astate = {}
+
 --[[
     COMING SOON
 --]]
+
+return state, fstate, astate
