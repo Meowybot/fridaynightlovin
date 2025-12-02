@@ -2,7 +2,7 @@ local state = {}
 local fstate = {}
 local astate = {}
 
-state.apath = "assets."
+state.apath = "assets.states."
 state.path = "states."
 state.current = "SplashScreen"
 
@@ -17,7 +17,17 @@ function state.emptylove()
 end
 
 function state.switch(towhat)
-    --here
+    state.emptylove()
+    fstate[state.current] = nil
+    astate[state.current] = nil
+    package.loaded[state.path .. state.current] = false
+    package.loaded[state.apath .. state.current] = false
+    
+    state.astate[towhat] = {}
+    require(state.apath .. towhat)
+    state.fstate[towhat] = {}
+    require(state.path .. towhat)
+    state.current = towhat
 end
 
 --[[
