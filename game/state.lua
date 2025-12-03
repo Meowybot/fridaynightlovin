@@ -25,9 +25,9 @@ function state.switch(towhat, ...)
     package.loaded[state.path .. state.current] = false
     package.loaded[state.apath .. state.current] = false
     
-    state.astate[towhat] = {}
+    astate[towhat] = {}
     require(state.apath .. towhat)
-    state.fstate[towhat] = {}
+    fstate[towhat] = {}
     require(state.path .. towhat)
     state.current = towhat
 end
