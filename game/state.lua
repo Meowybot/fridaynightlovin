@@ -5,6 +5,7 @@ local astate = {}
 state.apath = "assets.states."
 state.path = "states."
 state.current = "SplashScreen"
+state.vars = {}
 
 function state.emptylove()
     love.draw = function() end
@@ -16,7 +17,8 @@ function state.emptylove()
     love.mousereleased = function() end
 end
 
-function state.switch(towhat)
+function state.switch(towhat, ...)
+    state.vars = {...}
     state.emptylove()
     fstate[state.current] = nil
     astate[state.current] = nil
@@ -30,8 +32,12 @@ function state.switch(towhat)
     state.current = towhat
 end
 
---[[
-    COMING SOON
---]]
+function state.clear(clall, index)
+    if clall then
+        state.vars = {}
+    else
+        state.vars[index] = nil
+    end
+end
 
 return state, fstate, astate
