@@ -1,6 +1,6 @@
 function love.conf(t)
     t.window.title = "Friday Night Lovin'"
-    t.window.width = 1280
+    t.window.width = 1280 --16 9
     t.window.height = 720
     t.window.resizable = false
     t.console = true --only true during development

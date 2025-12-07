@@ -1,6 +1,6 @@
-local state = {}
-local fstate = {}
-local astate = {}
+state = {} --variables are now globals due to bugs.
+fstate = {} --funkin state
+astate = {} --assets state
 
 state.apath = "assets.states."
 state.path = "states."
@@ -8,7 +8,7 @@ state.current = "SplashScreen"
 state.vars = {}
 
 function state.emptylove()
-    print("emptying love2d callbacks")
+    print("emptying love2d callbacks") --printing to debug
     love.draw = function() end
     love.quit = function() end
     love.update = function() end
@@ -49,5 +49,3 @@ function state.clear(clall, index)
 end
 
 print("state file loaded")
-
-return state, fstate, astate
