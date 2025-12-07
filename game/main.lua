@@ -4,7 +4,7 @@ function love.load() -- only called once in the whole game
     --before this line, load external assets folder
     animx = require("animx") -- load animx library
     state, fstate, astate = require("state") -- load state switcher
-
+    state.switch("mainmenu")
 end
 
 --[[
