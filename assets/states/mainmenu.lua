@@ -3,6 +3,6 @@
 astate.mainmenu.storybut = {
     x = 0,
     y = 0,
-    asset = nil, --for now
-    action = function() end --for now
+    img = nil, --for now
+    gotostate = "splash" --for now
 }
