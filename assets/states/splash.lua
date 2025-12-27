@@ -4,5 +4,5 @@
 
 astate.splash.start {
     img = nil
-    goto = "mainmenu"
+    gotostate = "mainmenu"
 }
