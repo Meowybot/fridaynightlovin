@@ -1,4 +1,4 @@
-splashtexts = {
+return {
     {"Is that FNF", "For the LOVE2D?"},
     {"this message", "is not so random"},
     {"pro tip", "dont die"},
