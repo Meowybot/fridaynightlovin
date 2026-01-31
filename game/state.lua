@@ -1,5 +1,4 @@
-state = {} --variables are now globals due to bugs.
-fstate = {} --funkin state
+local state = {}
 astate = {} --assets state
 
 state.apath = "assets.states."
@@ -21,17 +20,13 @@ end
 
 function state.switch(towhat, ...)
     print("switching to " .. towhat)
-    print(...)
     state.vars = {...}
     state.emptylove()
-    fstate[state.current] = nil
     astate[state.current] = nil
     package.loaded[state.path .. state.current] = false
     package.loaded[state.apath .. state.current] = false
     
-    astate[towhat] = {}
-    require(state.apath .. towhat)
-    fstate[towhat] = {}
+    astate[towhat] = require(state.apath .. towhat)
     require(state.path .. towhat)
     state.current = towhat
 
@@ -49,3 +44,5 @@ function state.clear(clall, index)
 end
 
 print("state file loaded")
+
+return state
