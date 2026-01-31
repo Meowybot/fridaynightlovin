@@ -23,8 +23,8 @@ function state.switch(towhat, ...)
     state.vars = {...}
     state.emptylove()
     astate[state.current] = nil
-    package.loaded[state.path .. state.current] = false
-    package.loaded[state.apath .. state.current] = false
+    package.loaded[state.path .. state.current] = nil
+    package.loaded[state.apath .. state.current] = nil
     
     astate[towhat] = require(state.apath .. towhat)
     require(state.path .. towhat)
