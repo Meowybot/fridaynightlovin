@@ -4,7 +4,7 @@ function love.load() -- only called once in the whole game
     --before this line, load external assets folder
     anim8 = require("anim8") -- load anim8 library
     require("state") -- load state switcher
-    state.switch("mainmenu")
+    state.switch("splash")
 end
 
 --[[
