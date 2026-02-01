@@ -27,8 +27,8 @@ function state.switch(towhat, ...)
     package.loaded[state.apath .. state.current] = nil
     
     astate[towhat] = require(state.apath .. towhat)
-    require(state.path .. towhat)
     state.current = towhat
+    require(state.path .. towhat)
 
     print("successfully switched to" .. towhat)
 end
