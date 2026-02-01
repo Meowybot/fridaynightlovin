@@ -3,7 +3,7 @@ function love.load() -- only called once in the whole game
     love.filesystem.mount(love.filesystem.getSourceBaseDirectory() .. "/assets", "assets", true) --thank you love forums
     --before this line, load external assets folder
     anim8 = require("anim8") -- load anim8 library
-    require("state") -- load state switcher
+    state = require("state") -- load state switcher
     state.switch("splash")
 end
 
