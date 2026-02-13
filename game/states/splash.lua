@@ -18,10 +18,12 @@ for i, anim in pairs(anykey.animations) do
   anykey.anims[i] = anim8.newAnimation(anykey.grid(anim.frames[1], anim.frames[2]), 1/anykey.fps)
 end
 
-anykey.grid = 0
-anykey.anims = 0
 anykey.current = "idle"
 
+function love.update(dt)
+  anykey.anims[anykey.current]:update(dt)
+end
+
 function love.draw()
-  love.graphics.draw(anykey.img, 0, 0)
+  anykey.anims[anykey.current]:draw(anykey.img, anykey.x, anykey.y)
 end
