@@ -15,5 +15,5 @@ anykey.anims = 0
 anykey.current = "idle"
 
 function love.draw()
-  love.draw(anykey.img, 0, 0)
+  love.graphics.draw(anykey.img, 0, 0)
 end
