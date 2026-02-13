@@ -9,6 +9,7 @@ splashmenu.anykey = {
   fps = 24,
   frameW = 1280,
   frameH = 80,
+  scale = 1,
   anims = {
     idle = {frames = {1, "1-7"}},
     pressed = {frames = {1, "8-9"}}
