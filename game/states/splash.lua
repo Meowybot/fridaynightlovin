@@ -8,7 +8,15 @@ local anykey = {
   frameH = a.anykey.frameH,
   fps = a.anykey.fps,
   scale = a.anykey.scale,
+  animations = a.anykey.anims
 }
+
+anykey.grid = anim8.newGrid(anykey.frameW, anykey.frameH, anykey.img:getWidth(), anykey.img:getHeight())
+
+anykey.anims = {}
+for i, anim in pairs(anykey.animations) do
+  anykey.anims[i] = nil
+end
 
 anykey.grid = 0
 anykey.anims = 0
