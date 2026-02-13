@@ -1,7 +1,7 @@
 return {
-spritesheet = "bf",
-rows = 10,
-columns = 10,
+img = "bf",
+frameW = 10,
+frameH = 10,
 icon = "bf-",
 iconsuffixes = {
   lose = "loss",
@@ -22,6 +22,6 @@ camoffset = {
   y = 0
 },
 anims = {
-  idle = {frames = "1-5", loop = true}
+  idle = {frames = {"1-5", 1}, loop = true}
 }
 }
