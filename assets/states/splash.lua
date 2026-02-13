@@ -7,11 +7,11 @@ local splashmenu = {}
 splashmenu.anykey = {
   img = "anykey.png",
   fps = 24,
-  rows = 1,
-  cols = 9,
+  frameW = 1280,
+  frameH = 80,
   anims = {
-    idle = {frames = "1-7"},
-    pressed = {frames = "8-9"}
+    idle = {frames = {1, "1-7"}},
+    pressed = {frames = {1, "8-9"}}
   },
   x = 0,
   y = 630
