@@ -15,7 +15,8 @@ anykey.grid = anim8.newGrid(anykey.frameW, anykey.frameH, anykey.img:getWidth(),
 
 anykey.anims = {}
 for i, anim in pairs(anykey.animations) do
-  anykey.anims[i] = anim8.newAnimation(anykey.grid(anim.frames[1], anim.frames[2]), 1/anykey.fps)
+  local fpsmult = anim.speed or 1
+  anykey.anims[i] = anim8.newAnimation(anykey.grid(anim.frames[1], anim.frames[2]), 1/(anykey.fps*fpsmult))
 end
 
 anykey.current = "idle"
