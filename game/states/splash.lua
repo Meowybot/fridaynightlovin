@@ -26,5 +26,5 @@ function love.update(dt)
 end
 
 function love.draw()
-  anykey.anims[anykey.current]:draw(anykey.img, anykey.x, anykey.y)
+  anykey.anims[anykey.current]:draw(anykey.img, anykey.x, anykey.y, anykey.scale)
 end
