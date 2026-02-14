@@ -1,8 +1,11 @@
---[[
-    TODO
---]]
-
 local splashmenu = {}
+
+splashmenu.gf = {
+  char = "gfSplash",
+  x = 640,
+  y = 0,
+  scale = 1
+}
 
 splashmenu.anykey = {
   img = "anykey.png",
