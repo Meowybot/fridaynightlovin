@@ -28,3 +28,15 @@ end
 function love.draw()
   anykey.anims[anykey.current]:draw(anykey.img, anykey.x, anykey.y, anykey.scale)
 end
+
+local function startGame()
+  state.switch("mainmenu")
+end
+
+function love.keyreleased()
+  startGame()
+end
+
+function mousereleased()
+  startGame()
+end
