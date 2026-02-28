@@ -1,1 +1,0 @@
-this is where game data goes like charts and characters and other stuff

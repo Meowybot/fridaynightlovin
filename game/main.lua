@@ -1,24 +1,11 @@
-function love.load() -- only called once in the whole game
-    --after this line, load external assets folder
-    local success = love.filesystem.mount(love.filesystem.getSourceBaseDirectory(), "", true) --thank you love forums
+function love.load()
+    local success = "Assets already embedded, no mounting required."
+    --local success = love.filesystem.mount(love.filesystem.getSourceBaseDirectory(), "", true)
     print(success)
-    --before this line, load external assets folder
-    anim8 = require("anim8") -- load anim8 library
-    state = require("state") -- load state switcher
+    print("loading libraries")
+    purf = require("mlib.purf")
+    --anim8 = require("lib.anim8")
+    state = require("mlib.state")
+    print("libraries loaded")
     state.switch("splash")
-end
-
---[[
-    This is what loads the actual game, it wil load the external assets/ folder outside of game.love.
-    This is an fnf port for love2d, made specifically for modding.
-    game version: 0.0.1 (unfinished)
-    love2d version: 11.5
-    license: Unlicense
-    for more info about making mods, check the root and assets files.
---]]
-
-function love.update(dt) -- called every frame, won't use on this file...
-end
-
-function love.draw() -- called every frame, won't use on this file...
 end
