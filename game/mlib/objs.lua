@@ -13,8 +13,12 @@ mt_prop.__index = mt_prop
 
 function objs.newAnim(image, frames, fps)
   local anim = {}
+  anim.fps = fps
+  anim.f = {}
   for i, v in ipairs(frames) do
+    anim.f[i] = love.graphics.newQuad(v.x, v.y, v.w, v.h, image)
   end
+  return anim
 end
 
 -- OBJ
