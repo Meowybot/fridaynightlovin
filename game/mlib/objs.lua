@@ -11,6 +11,12 @@ mt_prop.__index = mt_prop
 
 -- ANIM
 
+function objs.newAnim(image, frames, fps)
+  local anim = {}
+  for i, v in ipairs(frames) do
+  end
+end
+
 -- OBJ
 
 -- CHAR
