@@ -18,10 +18,10 @@ function objs.newAnim(image, frames, fps, offsets)
   anim.change = 1/fps
   anim.current = 1
   anim.offsets = {
-    x = offsets.x or 0
-    y = offsets.y or 0
-    r = offsets.r or 0
-    sx = offsets.sx or 0
+    x = offsets.x or 0,
+    y = offsets.y or 0,
+    r = offsets.r or 0,
+    sx = offsets.sx or 0,
     sy = offsets.sy or 0
   }
   anim.f = {}
@@ -65,6 +65,12 @@ end
 function mt_obj:draw()
   local quad = self.a[self.current]
   love.graphics.draw(self.img, quad.f[quad.current], self.x+quad.offsets.x, self.y+quad.offsets.y, self.r+quad.offsets.r, self.sx+quad.offsets.sx, self.sy+quad.offsets.sy)
+end
+
+function mt_obj:changeAnimation(name)
+  if self.a[name] then
+    self.current = name
+  end
 end
 
 -- CHAR
