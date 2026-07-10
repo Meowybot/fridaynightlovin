@@ -1,4 +1,4 @@
-local baseobj = require("classes.staticobj")
+local baseobj = require("classes.baseobj")
 
 local staticobj = baseobj:extend()
 
